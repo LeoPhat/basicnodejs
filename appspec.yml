@@ -1,0 +1,12 @@
+
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/api/
+hooks:
+  
+  ApplicationStart:
+    - location: scripts/start.sh
+      runas: root
+      timeout: 300
