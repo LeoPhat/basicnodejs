@@ -116,6 +116,9 @@ app.get("/",(req, res)=>{
 app.get("/phat",(req, res)=>{     
     res.render("welcome")
 })
+app.get("/my",(req, res)=>{
+    res.send ("<h1 style="background-color:DodgerBlue;">Dinh Truc My</h1>")  
+})
 //Functions
 function RandomString(n){
     var result = "";
