@@ -111,9 +111,11 @@ app.get("/active/:CodeActive", (req, res)=>{
 //User - Login
 
 app.get("/",(req, res)=>{
-    res.render("welcome")
+    res.render("welcome.ejs")
 })
-
+app.get("/phat",(req, res)=>{
+    res.send ("Dinh Van Vinh Phat deployed successfully")    
+})
 //Functions
 function RandomString(n){
     var result = "";
