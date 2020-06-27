@@ -1,4 +1,4 @@
 #!bin/bash
 cd basicnodejs
-npm install
+#npm install
 node index.js
