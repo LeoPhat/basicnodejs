@@ -3,7 +3,7 @@ var app = express()
 app.set ("views", "./views")
 app.set ("view engine", "ejs")
 
-app.listen(80)
+app.listen(3000)
 
 //bodyParser
 var bodyParser = require ("body-parser")
