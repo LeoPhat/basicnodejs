@@ -12,7 +12,7 @@ hooks:
   BeforeAllowTraffic:
     - location: scripts/start.sh
       runas: root
-      timeout: 300
+      timeout: 60
 #   BeforeAllowTraffic:
 #     - location: infrastructures/beforeAllowTraffic.sh
 #       runas: root
