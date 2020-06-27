@@ -1,4 +1,4 @@
 #!bin/bash
-cd basicnodejs
+cd /var/api/
 #npm install
 node index.js
