@@ -11,6 +11,7 @@ hooks:
         timeout: 300
   ApplicationStop:
     - location: scripts/stop.sh
+      runas: root
       timeout: 60
   BeforeAllowTraffic:
     - location: scripts/start.sh
