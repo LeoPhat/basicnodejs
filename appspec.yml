@@ -9,10 +9,10 @@ hooks:
     -   location: scripts/install_dependencies.sh
         runas: root
         timeout: 300
-  ApplicationStop:
-    - location: scripts/stop.sh
-      runas: root
-      timeout: 60
+  #ApplicationStop:
+  #  - location: scripts/stop.sh
+  #    runas: root
+  #    timeout: 60
   BeforeAllowTraffic:
     - location: scripts/start.sh
       runas: root
