@@ -111,13 +111,13 @@ app.get("/active/:CodeActive", (req, res)=>{
 //User - Login
 
 app.get("/",(req, res)=>{
-    res.send ("Dinh Van Vinh Phat have deployed successfully")  
+    res.send ('<h1 style="color:MediumSeaGreen;">Dinh Van Vinh Phat have deployed successfully</h1>')  
 })
 app.get("/phat",(req, res)=>{     
     res.render("welcome")
 })
 app.get("/my",(req, res)=>{
-    res.send ("<h1 style="background-color:DodgerBlue;">Dinh Truc My</h1>")  
+    res.send ('<h1 style="background-color:DodgerBlue;">Dinh Truc My</h1>')  
 })
 //Functions
 function RandomString(n){
