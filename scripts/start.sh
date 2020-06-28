@@ -1,5 +1,5 @@
 #!bin/bash
-cd /var/api/
+cd /var/api/basicnodejs
 #npm install
-#node index.js
-nohup npm run main > /dev/null 2>&1 &
+node index.js
+
