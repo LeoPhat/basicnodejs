@@ -1,5 +1,5 @@
 #!bin/bash
 cd /var/api/basicnodejs
-#npm install
-node index.js
+npm install
+pm2 start index.js
 
