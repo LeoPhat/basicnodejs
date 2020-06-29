@@ -2,5 +2,5 @@
 cd /var/api/basicnodejs
 npm install
 pm2 status
-sudo pm2 start index.js -i 0
+pm2 start index.js --name "phat"
 
