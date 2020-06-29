@@ -34,7 +34,7 @@ const User = require ("./models/User")
 // });
 
 //User - Register
-app.post("/user/register", (req, res)=>{
+//app.post("/user/register", (req, res)=>{
 //     //Check username or email exist
 //     User.find({
 //         "$or": [{
