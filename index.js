@@ -24,8 +24,8 @@ mongoose.set('useFindAndModify', true)
 const User = require ("./models/User")
 
 //Bcrypt
-const bcrypt = require ("bcrypt")
-const saltRounds = 10
+//const bcrypt = require ("bcrypt")
+//const saltRounds = 10
 
 //Gmail-Send
 // const send = require('gmail-send')({
@@ -35,51 +35,51 @@ const saltRounds = 10
 
 //User - Register
 app.post("/user/register", (req, res)=>{
-    //Check username or email exist
-    User.find({
-        "$or": [{
-            "Username": req.body.Username
-        }, {
-            "Email": req.body.Email
-        }]
-    }, function(err, data){
-        if (data.length == 0) {
-            bcrypt.genSalt(saltRounds, function(err, salt) {
-                bcrypt.hash(req.body.Password, salt, function(errBam, hash) {
-                    if (!err) {
-                        var khachhang = new User ({
-                            Username: req.body.Username,
-                            Password: hash,
-                            Active: false,
-                            CodeActive: RandomString(30),
-                            Group: 0,
-                            RegisterDate: Date.now(),
+//     //Check username or email exist
+//     User.find({
+//         "$or": [{
+//             "Username": req.body.Username
+//         }, {
+//             "Email": req.body.Email
+//         }]
+//     }, function(err, data){
+//         if (data.length == 0) {
+//             bcrypt.genSalt(saltRounds, function(err, salt) {
+//                 bcrypt.hash(req.body.Password, salt, function(errBam, hash) {
+//                     if (!err) {
+//                         var khachhang = new User ({
+//                             Username: req.body.Username,
+//                             Password: hash,
+//                             Active: false,
+//                             CodeActive: RandomString(30),
+//                             Group: 0,
+//                             RegisterDate: Date.now(),
                     
-                            HoTen: req.body.HoTen,
-                            Email: req.body.Email,
-                            SoDT: req.body.SoDT,
-                            DiaChi: req.body.DiaChi
-                        })
-                        khachhang.save(function(errSave){
-                            if (errSave) {
-                                // Gởi mail active
-                                //http://localhost:3000/active/:CodeActive
+//                             HoTen: req.body.HoTen,
+//                             Email: req.body.Email,
+//                             SoDT: req.body.SoDT,
+//                             DiaChi: req.body.DiaChi
+//                         })
+//                         khachhang.save(function(errSave){
+//                             if (errSave) {
+//                                 // Gởi mail active
+//                                 //http://localhost:3000/active/:CodeActive
 
-                                res.json({"kq":0, "errMsg":errSave})
-                            } else {
-                                res.json({"kq":1})
-                            }
-                        })
-                    } else {
-                        res.json ({"kq": 0, "errMsg":errBam})
-                    }
-                });
-            });
-        } else {
-            res.json({"kq":0, "errMsg":"Email or Username is not available"})
-        }
-    })        
-})
+//                                 res.json({"kq":0, "errMsg":errSave})
+//                             } else {
+//                                 res.json({"kq":1})
+//                             }
+//                         })
+//                     } else {
+//                         res.json ({"kq": 0, "errMsg":errBam})
+//                     }
+//                 });
+//             });
+//         } else {
+//             res.json({"kq":0, "errMsg":"Email or Username is not available"})
+//         }
+//     })        
+// })
 
 //User - Active
 app.get("/active/:CodeActive", (req, res)=>{
