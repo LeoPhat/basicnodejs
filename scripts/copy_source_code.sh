@@ -1,12 +1,12 @@
 #!bin/bash
 
 cd /var/api
-pm2 stop all
+
 #xoa het source code cu
 sudo rm -rf *
 
 #copy source code moi tu git
 git clone https://github.com/LeoPhat/basicnodejs.git
 cd basicnodejs
-sudo chown -R $USER:$USER *
+sudo chown -R ec2-user:ec2-user *
 sudo chmod 755 * -R
