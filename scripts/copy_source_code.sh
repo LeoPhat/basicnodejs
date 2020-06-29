@@ -1,7 +1,7 @@
 #!bin/bash
 
 cd /var/api
-
+pm2 stop all
 #xoa het source code cu
 sudo rm -rf *
 
