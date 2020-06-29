@@ -2,5 +2,6 @@
 cd /var/api/basicnodejs
 sudo pm2 stop all 
 sudo pm2 delete all
-sudo killall node
+pm2 kill
+rm -rf ~/.pm2 
 
