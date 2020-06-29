@@ -111,7 +111,7 @@ app.get("/active/:CodeActive", (req, res)=>{
 //User - Login
 
 app.get("/",(req, res)=>{
-    res.send ('<h1 style="color:MediumSeaGreen;">Dinh Van Vinh Phat is trying to deploy successfully</h1>')  
+    res.send ('<h1 style="color:MediumSeaGreen;">Conratulations! Dinh Van Vinh Phat deployed successfully!!!!!!</h1>')  
 })
 app.get("/phat",(req, res)=>{     
     res.render("welcome")
